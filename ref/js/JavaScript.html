@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tutorial JavaScript</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <script src="../../js/main.js" defer></script>
+    </head>
+    <body id="root">
+        <header class="header">
+            <button class="bt">
+                <div class="d"></div>
+                <div class="d"></div>
+                <div class="d"></div>
+            </button>
+            <nav class="hnav">
+                <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="">HTML</a></li>
+                <li><a href="">CSS</a></li>
+                <li><a href="">JavaScript</a></li>
+                <li><a href="">Python</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="container">
+            <nav class="cnav">
+                <ul class="ul">
+                    <li><a href="#">variable</a></li>
+                </ul>
+            </nav>
+            <main class="main">
+                <button class="bt1">
+                    <div class="d1"></div>
+                    <div class="d1"></div>
+                    <div class="d1"></div>
+                </button>
+                <section class="msect1">
+                    <article class="sart">
+                        <picture class="art-pict">
+                            <img src="../../img/javascript.png" alt="">
+                        </picture>
+                        <h2 class="title">JavaScript</h2>
+                    </article>
+                    <h1 class="title1">Empezando con JavaScript:</h1>
+                    <p>JavaScript (que no debe confundirse con <strong>Java</strong> ) es un lenguaje dinámico y débil que se usa para
+                        las secuencias de comandos del lado del cliente y del lado del servidor</p>
+                    <p>JavaScript es un lenguaje que distingue entre mayúsculas y minúsculas. Esto sifnifica que <strong>let myvar</strong> no es lo mismo  que <strong>let Myvar</strong>.</p>
+                    <p>JavaScript es una implementación comúnmente referenciada del estándar <strong>ECMAScript</strong>.</p>
+                    <p>Los temas en esta etiqueta a menudo se refieren al uso de <strong>JavaScript</strong> en el navegador, a menos que se indique lo contrario. Los archivos <strong>JavaScript</strong> por sí solos no pueden ejecutarse directamente desde el navegador; Es necesario incrustarlos en un <strong>documento HTML</strong>:</p>
+                    <p>Puede <strong>incrustar JavaScript</strong> directamente en el <strong>documento HTML</strong> o isertar un archivos <strong>.js</strong>.</p>
+                    <br>
+                    <h3 class="title1">Incrustar JavaScript directamente en el documento HTML.</h3>
+                    <br>
+                    <br>
+                    <div class="code-editor">
+                        <pre class="s1_par_js">
+                            <span class="titlecd">HMTL</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                        </pre>
+                        <pre class="edit_content">
+    <code class="code">
+        
+        <span class="b">&lt;!DOCTYPE</span> <span class="c">html</span><span class="b">&gt;</span>
+        <span class="b">&lt;html</span> <span class="c">lang=</span><span class="r">"en"</span><span class="b">&gt;</span>
+
+            <span class="b">&lt;head&gt;</span>
+
+                <span class="b">&lt;meta</span> <span class="c">charset=</span><span class="r">"utf-8"</span><span class="b">&gt;</span>
+                <span class="b">&lt;title&gt;</span>Test page<span class="b">&lt;/title>
+
+            <span class="b">&lt;head&gt;</span>
+
+            <span class="b">&lt;body&gt;</span>
+
+                <span class="b">&lt;script&gt;</span>
+                    <span class="d">// YOUR CODE HERE</span>
+                <span class="b">&lt;script&gt;</span>
+
+            <span class="b">&lt;/body&gt;</span>
+
+        <span class="b">&lt;/html&gt;</span>
+    </code>
+                        </pre>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="title1">Insertar un archivo .js</h3>
+                    <br>
+                    <div class="code-editor">
+                        <pre class="s1_par_js">
+                            <span class="titlecd">HTML</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                        </pre>
+                        <pre class="edit_content">
+    <code class="code">
+        
+        <span class="b">&lt;!DOCTYPE</span> <span class="c">html</span><span class="b">&gt;</span>
+        <span class="b">&lt;html</span> <span class="c">lang=</span><span class="r">"en"</span><span class="b">&gt;</span>
+
+            <span class="b">&lt;head&gt;</span>
+
+                <span class="b">&lt;meta</span> <span class="c">charset=</span><span class="r">"utf-8"</span><span class="b">&gt;</span>
+                <span class="b">&lt;title&gt;</span>Test page<span class="b">&lt;/title>
+                
+                <span class="b">&lt;script</span> <span class="c">src=</span><span class="r">"name.js"</span><span class="c"> defer</span><span class="b">&gt;&lt;script&gt;</span>
+
+            <span class="b">&lt;head&gt;</span>
+
+            <span class="b">&lt;body&gt;</span>
+
+            <span class="b">&lt;/body&gt;</span>
+
+        <span class="b">&lt;/html&gt;</span>
+    </code>
+                        </pre>
+                    </div>
+                </section>
+                <section class="msect2">
+                    <h3 class="title1">Empezando con JavaScript.</h3>
+                    <nav class="s2-nav">
+                        <ul class="ul">
+                            <li><a href="#">Elementos del Lenguaje</a></li>
+                            <ul>
+                                <li><a href="#">Variables</a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
+                            <li><a href="ajax.html">AJAX</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </main>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <footer class="footer">
+
+        </footer>
+    </body>
+</html>
