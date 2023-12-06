@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Enviando mensajes</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <button class="bt">
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+        </button>
+        <nav class="hnav">
+            <ul class="menu" data-1="../../index.html"data-2="../html/views.html"data-3="../css/iinitcss.html"data-4="../js/JavaScript.html"data-5="../python/iniciopy.html"data-6="../otros/documentation.html">
+            </ul>
+            <!-- <a href="../html/views.html"></a> -->
+        </nav>
+    </header>
+    <div class="container">
+        <nav class="cnav">
+            <ul class="ul">
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <section class="msect1">
+                <article class="sart">
+                    <picture class="art-pict">
+                        <img src="../../img/javascript.png" alt="">
+                    </picture>
+                    <h2 class="title">Enviando mensajes</h2>
+                </article>
+                <article class="sect1_art">
+                    <h1 class="title1">Comunicación entre páginas</h1>
+                    <p>Para enviar mensajes a otra ventana, necesita tener una referencia a su objeto de <strong>window</strong>. <strong>window.open()</strong> devuelve el objeto de referencia de la ventana recién abierta. Para otros métodos para obtener una referencia a un objeto de ventana.</p>
+                </article>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">JavaScript</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+    
+<span class="b">let</span> childWindow = window.open <span class="y">(</span><span class="r">"http://base.com"</span>, <span class="r">"_blank"</span><span class="y">)</span>
+
+</code>
+                    </pre>
+                </div>
+
+                <p>Agregue un área de textarea y un send button que se usará para enviar mensajes a la ventana secundaria.</p>
+
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">HTML</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+    
+<span class="b">&lt;textarea</span> <san class="c">class</san>= <span class="r">"text"</span><span class="b">&gt;&lt;/textarea&gt;
+&lt;button</span> <span class="c">class</span>=<span class="r">"bt"</span><span class="b">&gt;</span>Send Message<span class="b">&lt;/button&gt;</span>
+
+</code>
+                </pre>
+            </div>
+
+            <p>Envíe el texto de área de <strong>textarea</strong> utilizando <strong>.postMessage(message, targetOrigin)</strong> cuando se precione el button.</p>
+            
+            <div class="code-editor">
+                <pre class="s1_par_js">
+                    <span class="titlecd">JavaScript</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                </pre>
+                <pre class="edit_content">
+<code class="code">
+    
+<span class="b">let</span> d = document;
+<span class="b">let</span> bt = d.querySelector<span class="y">(</span><span class="r">'.bt'</span><span class="y">)</span>;
+<span class="b">let</span> text = d.querySelector<span class="y">(</span><span class="r">'.text'</span><span class="y">)</span>;
+
+bt.addEventListener<span class="y"></span>(<span class="r">'click'</span>,<span class="v">()</span><span class="b">=></span><span class="v">{</span>
+    sendMessage<span class="y">(</span><span class="y">)</span>;
+    text.value = <span class="r">""</span>;
+    <span class="v">}</span><span class="y">)</span>;
+
+    <span class="b">function</span> sendMessage<span class="y">(</span>message<span class="y">){</span>
+        <span class="b">if</span> <span class="v">(</span>!message || !message.length<span class="v">)</span> <span class="b">return</span>;
+        childWindow.postMessage<span class="v">(</span>JSON.stringify<span class="b">(</span><span class="y">{</span>
+        message: message,
+        time: <span class="b">new</span> Date<span class="v">()</span>
+        <span class="y">}</span><span class="b">)</span>, <span class="r">'http://receiver.com'</span><span class="v">)</span>;
+    <span class="y">}</span>
+
+</code>
+                    </pre>
+                </div>
+
+                <article class="sect1_art">
+                    <p>Para enviar y recibir objetos JSON en lugar de una cadena simple, se pueden usar los métodos JSON.stringify() y JSON.parse() . Se puede dar un Transfarable Object como el tercer parámetro opcional del .postMessage(message, targetOrigin, transfer) , pero el navegador aún carece de soporte incluso en los navegadores modernos</p>
+                    <p>Para este ejemplo, dado que se supone que nuestro receptor es la página http://receiver.com, ingresamos su url como targetOrigin . El valor de este parámetro debe coincidir con el origin del objeto childWindow para que se envíe el mensaje. Es posible utilizar * como wildcard pero se recomienda encarecidamente evitar el uso del comodín y establecer siempre este parámetro en el origen específico del receptor por razones de seguridad.</p>
+                </article>
+            </section>
+            <section class="msect1">
+                <article class="sect1_art">
+                    <h2 class="title1">Recepción, validación y procesamiento de mensajes.</h2>
+                    <p>El código de esta parte se debe colocar en la página del receptor, que es http://receiver.com para nuestro ejemplo.</p>
+                    <p>Para recibir mensajes, se debe escuchar el message event de message event de la window .</p>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

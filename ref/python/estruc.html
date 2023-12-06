@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>python Estructura</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <button class="bt">
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+        </button>
+        <nav class="hnav">
+            <ul class="menu" data-1="../../index.html"data-2="../html/views.html"data-3="../css/iinitcss.html"data-4="../js/JavaScript.html"data-5="iniciopy.html"data-6="../otros/documentation.html">
+            </ul>
+            <!-- <a href="../html/views.html"></a> -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <nav class="cnav">
+            <h4 class="title1">Contenido</h4>
+            <ul class="ul">
+                <li><a href="#">Elementos del lenguaje</a></li>
+                <li><a href="#">Variables</a></li>
+                <li><a href="#">Tipos de datos</a></li>
+                <li><a href="#">Operadores Aritméticos</a></li>
+                <li><a href="#">Comentarios</a></li>
+                <li><a href="#">Tipos de datos complejos</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <section class="msect1">
+                <article class="sart">
+                    <picture class="art-pict">
+                        <img src="../../img/pylogo.png" alt="">
+                    </picture>
+                    <h2 class="title">Estructura y elementos del lenguaje</h2>
+                </article>
+                <article class="sect1_art">
+                    <h1 class="title1">Elementos del Lenguaje Python</h1>
+    
+                    <p>Como en la mayoría de los lenguajes de programación, <strong>Python</strong> se compone de una serie de elementos que alimentan su estructura. Entre ellos, podremos encontrar los siguientes:</p>
+    
+                    <p><strong>Python nos provee de reglas de estilos</strong>, a fin de poder escribir código fuente más legible y de manera estandarizada. Estas reglas de estilo, son definidas a través de la <strong>Python Enhancement Proposal Nº 8 (PEP 8)</strong>, la cual iremos viendo a lo largo del curso.</p>
+    
+                    <h3 class="title1">Variables</h3>
+    
+                    <p>Una variable es un espacio para almacenar datos modificables, en la memoria de un ordenador. En Python, una variable se define con la sintaxis:</p>
+                </article>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">Python</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+    <span class="b">nombre_de_la_variable</span> = <span class="y">valor_de_la_variable</span>
+</code>
+                    </pre>
+                </div>
+                <article class="sect1_art">
+                    <p>Cada variable, tiene un nombre y un valor, el cual define a la vez, el tipo de datos de la variable.</p>
+                    <p>Existe un tipo de “variable”, denominada constante, la cual se utiliza para definir valores fijos, que no requieran ser modificados.</p>
+                </article>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">PEP 8: variables</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+    <p>     Utilizar <strong><span class="b">nombres descriptivos</span></strong> y en <strong><span class="b">minúsculas</span></strong>. Para nombres compuestos, <strong>separar las palabras por guiones bajos</strong>.<br>     Antes y después del signo <strong><span class="y">=</span></strong>, debe haber uno <strong><span class="y">(y solo un)</span></strong> espacio en blanco</p>
+
+    <strong>Correcto:</strong> <span class="b">mi_variable</span> = <span class="y">12</span>
+    <strong>Incorrecto:</strong> <span class="b">MiVariable</span> = <span class="y">12</span> | <span class="b">mivariable</span> = <span class="y">12</span> | <span class="b">mi_variable</span>=<span class="y">12</span> | <span class="b">mi_variable</span> =  <span class="y">12</span>
+</code>
+                    </pre>
+                </div>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">PEP 8: constantes</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+    Utilizar <strong><span class="b">nombres descriptivos</span></strong> y en <strong><span class="b">mayúsculas</span></strong>, separar las palabras por guiones bajos.
+
+    <strong>Correcto:</strong> <span class="b">MI_VARIABLE</span> = <span class="y">12</span>
+</code>
+                    </pre>
+                </div>
+                <article class="sect1_art">
+                    <p>Para <strong>imprimir un valor en pantalla</strong>, en Python, se utiliza la palabra clave <strong>print</strong>:</p>
+                </article>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">Python</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+    <span class="b">mi_variabel</span> = <span class="y">12</span>
+
+    <span class="y">print</span><sapn class="v">(</sapn>mi_variabel<sapn class="v">)</sapn>
+</code>
+                    </pre>
+                </div>
+                <article class="sect1_art">
+                    <p>Lo anterior, imprimirá el valor de la variable <strong>mi_variable en pantalla</strong></p>
+                    <h3 class="title1">Tipos de datos</h3>
+                    <p>Una variable (o constante) puede contener valores de diversos tipos. Entre ellos: Cadena de texto (string):</p>
+                </article>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">Tipos de datos</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+    <p>     string</p>
+
+    mi_cadena = <span class="r">"Hola Mundo!"</span>
+
+    mi_cadena_multilinea = <span class="r">"""
+    Esta es una cadena
+    de varias lineas
+    """</span>
+
+    <p>     Número entero:</p>
+    edad = <span class="y">35</span>
+
+    <p>     Número entero octal:</p>
+    edad = <span class="y">035</span>
+
+    <p>     Número entero hexadecimal:</p>
+    edad = <span class="y">0x23</span>
+
+    <p>     Número real:</p>
+    precio = <span class="y">7435.28</span>
+
+    <p>     Booleano <strong>(verdadero / Falso)</strong></p>
+    verdadero =<span class="c">True</span>
+    falso =<span class="c">False</span>
+
+
+</code>
+                    </pre>
+                </div>
+                <article class="sect1_art">
+                    <p>Existen además, otros tipos de datos más complejos, que veremos más adelante.</p>
+                    <h3 class="title1">Operadores Aritméticos</h3>
+                    <p>Entre los operadores aritméticos que <strong>Python utiliza</strong>, podemos encontrar los siguientes:
+                    </p>
+                </article>
+                <table>
+                    <thead class="thead">
+                        <tr>
+                            <th>Símbolo</th>
+                            <th>Significado</th>
+                            <th>Ejemplo</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tbody__tr">
+                            <td>+</td>
+                            <td>Suma</td>
+                            <td>a = 10 + 5</td>
+                            <td>a es 15</td>
+                        </tr>
+                        <tr class="tbody__tr">
+                            <td>-</td>
+                            <td>Resta</td>
+                            <td>a = 12 - 7</td>
+                            <td>a es 5</td>
+                        </tr>
+                        <tr class="tbody__tr">
+                            <td>-</td>
+                            <td>Negación</td>
+                            <td>a = -5</td>
+                            <td>a es -5</td>
+                        </tr>
+                        <tr class="tbody__tr">
+                            <td>*</td>
+                            <td>Multiplicación</td>
+                            <td>a = 7 * 5</td>
+                            <td>a es 35</td>
+                        </tr>
+                        <tr class="tbody__tr">
+                            <td>**</td>
+                            <td>Exponente/td>
+                            <td>a = 2 ** 3</td>
+                            <td>a es 8</td>
+                        </tr>
+                        <tr class="tbody__tr">
+                            <td>/</td>
+                            <td>Divición</td>
+                            <td>a = 12.5 7 2</td>
+                            <td>a es 6.25</td>
+                        </tr>
+                        <tr class="tbody__tr">
+                            <td>//</td>
+                            <td>Divición Entera</td>
+                            <td>a = 12.5 7 2</td>
+                            <td>a es 6.0</td>
+                        </tr>
+                        <tr class="tbody__tr">
+                            <td>%</td>
+                            <td>Modulo</td>
+                            <td>a = 27 % 4</td>
+                            <td>a es 3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">Un ejemplo sencillo con variables y operadores aritméticos:</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+    monto_bruto = <span class="y">175</span>
+
+    tasa_interes = <span class="y">12</span>
+
+    monto_interes = monto_bruto <span class="y">*</span> tasa_interes <span class="y">/ 100</span>
+
+    tasa_bonificacion = <span class="y">5</span>
+
+    importe_bonificacion = monto_bruto <span class="y">*</span> tasa_bonificacion <span class="y">/ 100</span>
+
+    monto_neto = <span class="y">(</span>monto_bruto <span class="y">-</span> importe_bonificacion<span class="y">) +</span> monto_interes
+
+</code>
+                    </pre>
+                </div>
+                <article class="sect1_art">
+                    <h3 class="title1">Comentarios</h3>
+                    <p>Un archivo, no solo puede contener código fuente. También puede incluir comentarios <strong>(notas que como programadores, indicamos en el código para poder comprenderlo mejor)</strong>.</p>
+                    <p>Los comentarios pueden ser de dos tipos: de <strong>una sola línea</strong> o <strong>multi-línea</strong> y se expresan de la siguiente manera:</p>
+                </article>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">Python comentario</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+    <span class="d"> # Esto es un comentario de una sola línea</span>
+    mi_variable = <span class="y">15</span>
+
+    <span class="r">"""
+    Y este es un comentario
+    de varias líneas
+
+    """</span>
+    mi_variable = 15
+
+    mi_variable = <span class="y">15</span><span class="d"> # Este comentario es de una línea también</span>
+
+
+</code>
+                    </pre>
+                </div>
+                <article class="sect1_art">
+                    <p>En los comentarios, pueden incluirse palabras que nos ayuden a identificar que se debe hacer además, el subtipo de comentario:</p>
+                </article>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">python comentario</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+    <span class="d"> # <strong>TODO</strong> esto es algo por hacer </span>
+    <span class="d"> # <strong>FIXME</strong> esto es algo que debe corregirse </span>
+    <span class="d"> # <strong>XXX</strong> esto también, es algo que debe corregirse </span>
+
+    <p>     <strong>PEP 8: comentarios</strong><br>
+    Comentarios en la misma línea del código deben separarse con dos espacios en blanco. <br>    Luego del símbolo # debe ir un solo espacio en blanco.
+
+    <strong>Correcto:</strong>
+
+    a = 15  <span class="d"># Edad de María</span>
+
+    <strong>Incorrecto:</strong>
+    a = 15<span class="d"># Edad de María</span>
+    </p>
+</code>
+                    </pre>
+                </div>
+                <article class="sect1_art">
+                    <h3 class="title1">Tipos de datos complejos</h3>
+                    <p>Python, posee además de los tipos ya vistos, 3 tipos más complejos, que admiten una <strong>colección de datos</strong>. Estos tipos son:</p>
+                    <ul>
+                        <li>tuplas</li>
+                        <li>Listas</li>
+                        <li>Diccionarios</li>
+                    </ul>
+                    <h3 class="title1">Tuplas</h3>
+                    <p>Una tupla es una variable que permite almacenar varios datos inmutables <strong>(no pueden ser modificados una vez creados)</strong> de tipos diferentes:</p>
+                </article>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">Python</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+    mi_tupla = <span class="y">(</span><span class="r">'cadena de texto'</span>, 15, 2.8, <span class="r">'otro dato'</span>, 25<span class="y">)</span>
+
+</code>
+                    </pre>
+                </div>
+                <p>Se puede acceder a cada uno de los datos mediante su índice correspondiente, siendo 0 (cero), el índice del primer elemento:</p>
+                
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">Python</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+    <span class="y">print(</span>mi_tupla<span class="v">[</span>1<span class="v">]</span><span class="y">)</span><span class="d"> # Salida: 15</span>
+    
+</code>
+                    </pre>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>

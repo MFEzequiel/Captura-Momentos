@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial JavaScript</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <button class="bt">
+            <div class="d"></div>
+            <div class="d"></div>
+            <div class="d"></div>
+        </button>
+        <nav class="hnav">
+            <ul class="menu" data-1="../../index.html"data-2="../html/views.html"data-3="../css/iinitcss.html"data-4="../js/JavaScript.html"data-5="../python/iniciopy.html"data-6="../otros/documentation.html"></ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <nav class="cnav">
+            <ul class="ul">
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <section class="msect1">
+                <article class="sart">
+                    <picture class="art-pict">
+                        <img src="../../img/javascript.png" alt="">
+                    </picture>
+                    <h2 class="title">Elementos</h2>
+                </article>
+                <h2 class="title1">Diferencia entre var y let.</h2>
+                <p>(<strong>Nota:</strong> todos los ejemplos que usan <strong>let</strong> también son valido para <strong>const</strong>)</p>
+                <p><strong>var</strong> está disponible en todas las verciones de JavaScript,mientras que <strong>let y const</strong> son partes de ECMAScript 6 y <a href="#">Solo esta disponible en algúnos navegadores más núevos</a></p>
+                <br>
+                <br>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">JavaScript</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+    
+<span class="b">var</span> x = 4; <span class="d"> // global scope</span>
+
+<span class="b">function</span> DoThings<span class="y">() {</span>
+    var x = 7; <span class="d"> // function scope</span>
+    console.log<span class="v">(</span>x<span class="v">)</span>;
+    <span class="y">}</span>
+
+console.log<span class="y">(</span> x<span class="y">)</span>; <span class="d"> // >> 4</span>
+DoThings<span class="y">()</span>; <span class="d"> // >> 7</span>
+console.log<span class="y">(</span> x<span class="y">)</span>; <span class="d"> // >> 4</span>
+</code>
+                    </pre>
+                </div>
+                <br>
+                <br>
+                <p>Esto sinifica que se <strong>"escapa"</strong> <strong>if</strong> declaraciones y todas las construcciones de bloque similares</p>
+                <br>
+                <br>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">JavaScript</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+<span class="b">var</span> x = 4;
+
+<span class="b">if (</span>true<span class="b">)</span> <span class="y">{</span>
+    var x = 7;
+<span class="y">}</span>
+
+console.log(x); <span class="d">// >> 7</span>
+
+for (var i = 0; i &lt; 4; i++) {
+    var j = 10;
+}
+
+console.log(i); <span class="d">// >> 4</span>
+console.log(j); <span class="d">// >> 10</span>
+</code>
+                    </pre>
+                </div>
+                <br>
+                <br>
+                <p>En comparación, <strong>let</strong> ámbito del bleque.</p>
+                <br>
+                <br>
+                <div class="code-editor">
+                    <pre class="s1_par_js">
+                        <span class="titlecd">JavaScript</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path> <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path> </g></svg>
+                    </pre>
+                    <pre class="edit_content">
+<code class="code">
+
+<span class="b">let</span> x = 4;
+</code>
+                    </pre>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>

@@ -16,13 +16,7 @@
             <div class="d"></div>
         </button>
         <nav class="hnav">
-            <ul>
-            <li><a href="../../index.html">Inicio</a></li>
-            <li><a href="">HTML</a></li>
-            <li><a href="">CSS</a></li>
-            <li><a href="JavaScript.html">JavaScript</a></li>
-            <li><a href="">Python</a></li>
-            </ul>
+            <ul class="menu" data-1="../../index.html"data-2="../html/views.html"data-3="../css/iinitcss.html"data-4="../js/JavaScript.html"data-5="../python/iniciopy.html"data-6="../otros/documentation.html"></ul>
         </nav>
     </header>
 
@@ -55,15 +49,15 @@
                     <pre class="edit_content">
 <code class="code">
     
-    <span class="b">let</span> xhttp = <span class="b">new</span> XMLHttpRequest<span class="y">()</span>;
+<span class="b">let</span> xhttp = <span class="b">new</span> XMLHttpRequest<span class="y">()</span>;
 
-    xhttp.onreadystatechange = <span class="b">function</span><span class="y">() {</span>
-        <span class="b">if </span><span class="v">(</span>xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200 <span class="v">){</span>
-            <span class="d">//parse the response in xhttp.responseText;</span>
-        <span class="v">}</span>
-    <span class="y">}</span>;
-    xhttp.open <span class="y">( <span class="r">"GET", "ajax_info.txt"</span>, <span class="c">true</span>)</span>;
-    xhttp.send <span class="y">()</span>;
+xhttp.onreadystatechange = <span class="b">function</span><span class="y">() {</span>
+    <span class="b">if </span><span class="v">(</span>xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200 <span class="v">){</span>
+        <span class="d">//parse the response in xhttp.responseText;</span>
+    <span class="v">}</span>
+<span class="y">}</span>;
+xhttp.open <span class="y">( <span class="r">"GET", "ajax_info.txt"</span>, <span class="c">true</span>)</span>;
+xhttp.send <span class="y">()</span>;
 </code>
                     </pre>
                 </div>
@@ -79,10 +73,10 @@
                     </pre>
                     <pre class="edit_content">
 <code class="code">
-    
-    fetch(<span class="r">'/'</span>).then<span class="y">(</span>response <span class="b">=></span> response.text <span class="v">()</span><span class="y">)</span>.then<span class="y">(</span>text <span class="b">=></span> <span class="v">{</span>
-        console.log<span class="b">(</span><span class="r">"The home page is "</span> + text.length + <span class="r">" characters long."</span><span class="b">)</span>;
-        <span class="v">}</span><span class="y">)</span>;
+
+fetch(<span class="r">'/'</span>).then<span class="y">(</span>response <span class="b">=></span> response.text <span class="v">()</span><span class="y">)</span>.then<span class="y">(</span>text <span class="b">=></span> <span class="v">{</span>
+    console.log<span class="b">(</span><span class="r">"The home page is "</span> + text.length + <span class="r">" characters long."</span><span class="b">)</span>;
+    <span class="v">}</span><span class="y">)</span>;
 </code>
                     </pre>
                 </div>
@@ -106,59 +100,32 @@
                         <pre class="edit_content">
     <code class="code">
         
-        <span class="b">const</span> requestData = <span class="y">{</span>
-            method : <span class="r">'getUsers'</span>
-        <span class="y">}</span>;
-        <span class="b">const</span> usersPromise = fetch( <span class="r">'/api'</span>, {
-            method : <span class="r">'POST'</span>,
-            body : JSON.stringify <span class="b">(</span> requestData<span class="b">)</span>
-            <span class="v">}</span><span class="y">)</span>.then<span class="y">(</span> response <span class="b">=></span> <span class="v">{</span>
-            <span class="b">if (</span>!response.ok<span class="b">) {</span>
-            <span class="b">throw new</span> Error<span class="y">(</span><span class="r">"Got non-2XX response from API server."</span><span class="y">)</span>;
-            <span class="b">}</span>
-            <span class="b">return</span> response.json<span class="b">()</span>;
-            <span class="v">}</span><span class="y">)</span>.then<span class="b">(</span>responseData <span class="b">=></span> <span class="v">{</span>
-                <span class="b">return</span> responseData.users;
-                    <span class="v">}</span><span class="y">)</span>;
-        usersPromise.then<span class="b">(</span> users <span class="b">=></span> <span class="v">{</span>
-            console.log<span class="b">(</span><span class="r">"Known users: "</span>, users<span class="b">)</span>;
-            <span class="v">}</span>, error <span class="b">=></span> <span class="v">{</span>
-            console.error<span class="b">(</span><span class="r">"Failed to fetch users due to error: "</span>, error<span class="b">)</span>;
-            <span class="v">}<span class="y">)</span>;
+<span class="b">const</span> requestData = <span class="y">{</span>
+    method : <span class="r">'getUsers'</span>
+<span class="y">}</span>;
+<span class="b">const</span> usersPromise = fetch( <span class="r">'/api'</span>, {
+    method : <span class="r">'POST'</span>,
+    body : JSON.stringify <span class="b">(</span> requestData<span class="b">)</span>
+    <span class="v">}</span><span class="y">)</span>.then<span class="y">(</span> response <span class="b">=></span> <span class="v">{</span>
+    <span class="b">if (</span>!response.ok<span class="b">) {</span>
+    <span class="b">throw new</span> Error<span class="y">(</span><span class="r">"Got non-2XX response from API server."</span><span class="y">)</span>;
+    <span class="b">}</span>
+    <span class="b">return</span> response.json<span class="b">()</span>;
+    <span class="v">}</span><span class="y">)</span>.then<span class="b">(</span>responseData <span class="b">=></span> <span class="v">{</span>
+        <span class="b">return</span> responseData.users;
+            <span class="v">}</span><span class="y">)</span>;
+usersPromise.then<span class="b">(</span> users <span class="b">=></span> <span class="v">{</span>
+    console.log<span class="b">(</span><span class="r">"Known users: "</span>, users<span class="b">)</span>;
+    <span class="v">}</span>, error <span class="b">=></span> <span class="v">{</span>
+    console.error<span class="b">(</span><span class="r">"Failed to fetch users due to error: "</span>, error<span class="b">)</span>;
+    <span class="v">}<span class="y">)</span>;
         
     </code>
                         </pre>
                     </div>
             </section>
             <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        
         </main>
     </div>
 </body>
