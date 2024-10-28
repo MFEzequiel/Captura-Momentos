@@ -1,0 +1,286 @@
+.main {
+    overflow: hidden;
+    width: 100%;
+    margin: 50px 0;
+    padding: 0 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section {
+    padding: 10px 50px;
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 1050px;
+}
+
+.container-carousel {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.carousel-roulet {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.roulet-index {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.roulet-index.roulet-index-active {
+    opacity: 1;
+}
+
+.index-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-offer {
+    width: 34%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 20px;
+}
+
+.offer-container {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    float: right;
+}
+
+.container-shop {
+    display: grid;
+    gap: 20px;
+    margin: auto;
+    justify-content: center;
+    align-items: start;
+    justify-items: start;
+    grid-template-columns: 33% 67%;
+}
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    width: 100%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    display: block;
+}
+
+.container-shopDetail, .shopDetail-paragraph {
+    display: flex;
+    gap: 50px;
+}
+
+.shopDetail-paragraph {
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 20px 0;
+}
+
+.container-image {
+    width: 80%;
+    height: auto;
+}
+
+.image-product {
+    width: 100%;
+}
+
+.container-home, .container-about {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.home-inicio, .home-service, .home-cliente, .about-history {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-work {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 20px 0;
+    gap: 10px;
+}
+
+.work-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.services-menu, .about-content, .about-team, .about-prime, .contact-form, .container-register, .ubication {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: disc;
+}
+
+.ubication {
+    padding: 20px 0;
+}
+
+.services-menu{
+    padding-left: 20px;
+}
+
+.services-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.container-redes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+
+@media only screen and (max-width: 1900px) {
+    .container-carousel {
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .container-carousel {
+        height: 436px;
+    }
+
+    .container-work {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 980px) {
+    .main {
+     padding: 10px 25px;   
+    }
+
+    .main-section {
+        width: 100%;
+        padding: 0 10px;
+        margin: 0 25px;
+    }
+
+    .container-carousel {
+        height: 700px;
+        flex-flow: column;
+    }
+
+    .carousel-roulet,
+    .carousel-offer {
+        width: 100%;
+    }
+
+    .carousel-roulet{
+        height: 100%;
+    }
+
+    .container-image {
+        width: auto;
+    }
+
+    .container-shop {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main {
+        padding: 10px 0;
+    }
+
+    .main-section {
+            padding: 10px;
+            margin: 0;
+        }
+    .container-shop {
+        grid-template-columns: auto;
+    }
+
+    .container-carousel {
+        height: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .container-carousel {
+        height: 200px;
+    }
+
+    .carousel-roulet {
+        height: 100%;
+    }
+
+    .carousel-offer {
+        height: 60%;
+    }
+
+    .container-work {
+        justify-items: center;
+    }
+}

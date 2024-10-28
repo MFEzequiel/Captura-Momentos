@@ -1,0 +1,21 @@
+.item-link.active {
+    color: var(--Dark-Grayish-Blue);
+    border-bottom: 2px solid var(--Very-Dark-Grayish-Blue);
+}
+
+.header-button>.header-button-active:first-child {
+  transform: rotate(45deg);
+}
+
+.header-button>.header-button-active:nth-child(2) {
+  opacity: 0;
+}
+
+.header-button>.header-button-active:last-child {
+  transform: rotate(-45deg);
+}
+
+.roulet-index-active {
+  opacity: 1;
+  transition: all 1s ease;
+}
